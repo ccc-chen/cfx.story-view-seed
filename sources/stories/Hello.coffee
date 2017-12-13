@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react'
-import { Hello } from '../components/Hello'
+import Hello from '../components/Hello'
 # import { Hello } from '../../dist/bundle'
 
 import { prefixDom } from 'cfx.dom'
