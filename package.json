@@ -12,6 +12,7 @@
   "devDependencies": {
     "cfx.require": "^0.0.1",
     "cfx.require-plugin-coffee": "^0.0.4",
+    "antd-mobile": "2.1.1",
     "ddeyes": "^0.0.4",
     "shelljs": "^0.7.8"
   },
@@ -20,10 +21,11 @@
     "@storybook/addon-options": "^3.2.17",
     "@storybook/react": "^3.2.17",
     "cfx.dom": "^0.0.3",
-    "cfx.simple-build-tool": "^0.0.3",
+    "cfx.simple-build-tool": "0.0.3",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "reset-css": "^2.2.1"
+    "reset-css": "^2.2.1",
+    "cfx.todos": "file:../cfx.todos"
   }
 }
