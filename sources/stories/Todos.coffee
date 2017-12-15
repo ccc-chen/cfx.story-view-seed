@@ -15,9 +15,7 @@ export default ->
 
   , =>
 
-    {
-      c_Todos
-    } = CFX
+    { c_Todos } = CFX
 
     c_Todos {}
 
