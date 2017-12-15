@@ -1,1 +1,6 @@
-export { Hello } from './sources/index.coffee';
+export {
+  models,
+  services,
+  store,
+  constants
+} from 'src';

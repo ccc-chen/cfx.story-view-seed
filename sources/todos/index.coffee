@@ -5,10 +5,10 @@ import {
 } from 'cfx.todos/dist/bundle'
 import { prefixDom } from 'cfx.dom'
 import React, { Component } from 'react'
-import { connect } from 'cfx.react-redux'
+# import { connect } from 'cfx.react-redux'
 
-import { store } from '../../Services/store'
-{ actions } = store 
+# import { store } from '../../Services/store'
+# { actions } = store 
 
 CFX = prefixDom {
   'div'  
@@ -17,7 +17,8 @@ CFX = prefixDom {
   Checkbox
 }
 
-class StoryUsers extends Component
+# class StoryUsers extends Component
+export default ->
 
   {
     c_div
@@ -33,14 +34,14 @@ class StoryUsers extends Component
     c_Checkbox {}
 
 
-mapStateToProps = (state) ->
-  getState state.userApp.users
+# mapStateToProps = (state) ->
+#   getState state.userApp.users
 
 # mapActionToProps =
 #   fetch: actions.userFetch
 
-export default connect(
-  mapStateToProps
+# export default connect(
+  # mapStateToProps
   # mapActionToProps
-  StoryUsers
-)
+  # StoryUsers
+# )
