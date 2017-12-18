@@ -10,10 +10,10 @@
     "rollup": "rollup -c"
   },
   "devDependencies": {
+    "antd-mobile": "2.1.1",
+    "cfx.react-redux": "0.0.2",
     "cfx.require": "^0.0.1",
     "cfx.require-plugin-coffee": "^0.0.4",
-    "cfx.react-redux": "0.0.2",
-    "antd-mobile": "2.1.1",
     "ddeyes": "^0.0.4",
     "shelljs": "^0.7.8"
   },
@@ -23,11 +23,14 @@
     "@storybook/react": "^3.2.17",
     "cfx.dom": "^0.0.3",
     "cfx.simple-build-tool": "0.0.3",
+    "cfx.todos": "file:../cfx.todos",
+    "classTodoRedux": "file:../classTodoRedux",
+    "git": "^0.1.5",
+    "global": "^4.3.2",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "reset-css": "^2.2.1",
-    "cfx.todos": "file:../cfx.todos",
-    "classTodoRedux": "file:../classTodoRedux"
+    "xcode": "^1.0.0"
   }
 }
