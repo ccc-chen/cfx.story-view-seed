@@ -1,6 +1,6 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
-
+import { store }  from '../../store/index'
 import actions from '../../store/actions'
 import constants from '../../store/constants'
 # import {
@@ -11,8 +11,8 @@ import constants from '../../store/constants'
 
 
 
-target.test = ->
-  dd constants
+target.t = ->
+  dd store.getState()
 
 # target.all = ->
 #   myStore = getStore {

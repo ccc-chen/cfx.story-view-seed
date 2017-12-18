@@ -3,7 +3,7 @@ import { getStore } from 'cfx.redux'
 import constants from './constants'
 import actions from './actions'
 import reducers from './reducers'
-import dd from 'ddeyes'
+# import dd from 'ddeyes'
 
 store = getStore {
   appName: 'userApp'
@@ -17,9 +17,8 @@ export {
   getStore
   store
 }
-dd {
-  constants
-  actions
-  store
-
-}
+# dd {
+#   constants
+#   actions
+#   store
+# }
