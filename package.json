@@ -14,6 +14,7 @@
     "cfx.react-redux": "0.0.2",
     "cfx.require": "^0.0.1",
     "cfx.require-plugin-coffee": "^0.0.4",
+    "rollup-plugin-alias": "1.4.0",
     "ddeyes": "^0.0.4",
     "shelljs": "^0.7.8"
   },
@@ -24,7 +25,6 @@
     "cfx.dom": "^0.0.3",
     "cfx.simple-build-tool": "0.0.3",
     "cfx.todos": "file:../cfx.todos",
-    "classTodoRedux": "file:../classTodoRedux",
     "git": "^0.1.5",
     "global": "^4.3.2",
     "normalize.css": "^7.0.0",

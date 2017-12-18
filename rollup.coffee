@@ -1,3 +1,4 @@
+import alias from 'rollup-plugin-alias'
 import {
   coffee2
   coffeepath
@@ -11,6 +12,13 @@ export default
     format: 'cjs'
 
   plugins: [
+    alias
+      resolve: [
+        '.coffee'
+        '.js'
+      ]
+      src: './todos_server/store/index'
+
     coffee2
       bare: true
       sourceMap: true
