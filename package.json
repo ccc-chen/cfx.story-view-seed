@@ -24,9 +24,19 @@
     "@storybook/react": "^3.2.17",
     "cfx.dom": "^0.0.3",
     "cfx.simple-build-tool": "0.0.3",
+<<<<<<< HEAD
     "cfx.todos": "file:../cfx.todos",
+=======
+    "cfx.todos": "file:../../cfx.todos",
+    "ReduxServ": "file:../ReduxServ",
+>>>>>>> dc3c8fa5ced1b66ed87b9530ce1e32cc8e082a13
     "git": "^0.1.5",
     "global": "^4.3.2",
+    "cfx.redux": "^0.0.5",
+    "cfx.redux-actions": "^0.0.1",
+    "cfx.redux-saga": "^0.0.1",
+    "cfx.redux-types": "^0.0.4",
+    "cfx.react-redux": "^0.0.2",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
