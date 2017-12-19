@@ -1,33 +1,45 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
-import { store }  from '../../store/index'
-import actions from '../../store/actions'
-import constants from '../../store/constants'
-# import {
-#   store
-#   getStore
-# } from '../../Services/store'
-# import reducers from '../../Services/store/reducers'
+import { store }  from 'ReduxServ'
+{
+  constants
+  actions
+  reducers
+  getStore
+} = store
 
-
+subscriber = (
+  prevState
+  nextState
+  action
+  dispatch
+) ->
+  dd @getState()
 
 target.t = ->
-  dd store.getState()
+  dd Object.keys actions
 
-# target.all = ->
-#   myStore = getStore {
-#     appName: 'Todos'
-#     reducers
-#     subscriber: 
-#       sync: ->
-#         dd myStore.getState()
-#   }
-#   myStore.dispatch actions.userSave
-#     data: [
-#       name: 'hello'
-#       age: 18
-#     ]
-#     total: 10
-#     page: 1
-
-#   myStore.onsubscribe()    
+target.reducers = ->
+  myStore = getStore {
+    appName: 'userApp'
+    reducers
+    subscriber:
+      sync: ->
+        dd myStore.getState()
+    
+  }
+  
+  myStore.dispatch actions.visitorSave
+    filter: true
+  
+  myStore.onsubscribe()
+target.all = ->
+  dd store
+  # myStore = getStore {
+  #   appName: 'userApp'
+  #   reducers
+  #   subscriber:
+  #     sync: ->
+  #       dd myStore.getState()
+  # }
+  # dd myStore.getState()

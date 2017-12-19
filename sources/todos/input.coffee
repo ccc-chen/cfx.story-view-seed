@@ -5,10 +5,12 @@ import {
 import { prefixDom } from 'cfx.dom'
 import React, { Component } from 'react'
 
-import { store } from 'ReduxServ'
-console.log(store)
+import { store } from '../../store'
+
+console.log store
+
 { actions } = store
-console.log(actions)
+
 import { connect } from 'cfx.react-redux'
 
 
@@ -34,14 +36,15 @@ class StoryTodos extends Component
       c_Input {}
 
 
-mapStateToProps = (state) ->
-  getState state.userApp.users
+# mapStateToProps = (state) ->
+#   getState state.userApp.users
 
-mapActionToProps =
-  fetch: actions.userFetch
+# mapActionToProps =
+#   save: actions.visitorSave
 
-export default connect(
-  mapStateToProps
-  mapActionToProps
-  StoryTodos
-)
+# export default connect(
+#   mapStateToProps
+#   mapActionToProps
+#   StoryTodos
+# )
+export default StoryTodos
