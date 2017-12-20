@@ -1,8 +1,6 @@
 export {
-  constants,
-  actions,
-  reducers,
-  getStore,
-  store
+  // models,
+  // services,
+  store,
+  // constants
 } from 'src';
-""

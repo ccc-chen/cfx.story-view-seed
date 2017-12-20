@@ -17,8 +17,7 @@ export default
         '.coffee'
         '.js'
       ]
-      src: './todos_server/store/index'
-
+      src: './sources/index'    
     coffee2
       bare: true
       sourceMap: true

@@ -3,12 +3,11 @@ import {
   Input
 } from 'cfx.todos/dist/bundle'
 import { prefixDom } from 'cfx.dom'
-
-import { store } from '../../dist/bundle'
-# console.log store
-
 import React, { Component } from 'react'
 
+import { store } from 'ReduxServ'
+
+{ actions } = store
 import { connect } from 'cfx.react-redux'
 
 CFX = prefixDom {
@@ -18,7 +17,26 @@ CFX = prefixDom {
 }
 
 class StoryTodos extends Component
-  
+
+  constructor: (props) ->
+    super props
+    @state =
+      filter: true
+    @
+
+  componentWillMount: ->
+    @props.actions.visitorSave()
+    @
+
+  componentWillReceiveProps: (nextProps) ->
+    {
+      filter
+    } = nextProps.state
+    @setState {
+      filter
+    }
+    @    
+
   render: ->
 
     {
@@ -37,7 +55,7 @@ mapStateToProps = (state) ->
   getState state.userApp.users
 
 mapActionToProps =
-  fetch: actions.userFetch
+  save: actions.visitorSave
 
 export default connect(
   mapStateToProps

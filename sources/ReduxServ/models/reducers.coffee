@@ -6,7 +6,7 @@ export default
     state
     {
       payload: {
-        filter = true
+        filter
       }
     }
   ) ->
