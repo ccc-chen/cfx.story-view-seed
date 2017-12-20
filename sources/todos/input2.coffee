@@ -1,20 +1,65 @@
-import {
-  List
-} from 'cfx.todos/dist/bundle'
+import React, { Component } from 'react'
+import { Input } from 'cfx.todos'
 import { prefixDom } from 'cfx.dom'
 
+import { store } from 'ReduxServ'
+{ actions } = store
+
+import { connect } from 'cfx.react-redux'
+# import { Provider } from 'react-redux'
+
+import {
+  render
+  getState
+} from './common'
+
+
 CFX = prefixDom {
-  'div'  
-  List
+  Input
 }
 
-export default ->
+class StoryTodos extends Component
 
-  {
-    c_div
-    c_List
-  } = CFX
+  constructor: (props) ->
+    console.log props
+    super props
+    @state = 
+      filter: false
+    @
+ 
+  # componentWillReceiveProps: (nextProps) ->
+  #   {
+  #     filter
+  #   } = nextProps.state
+  #   @setState {
+  #     filter
+  #   }
+  #   @
 
-  c_div {}
-  ,
-    c_List {}
+  render: ->
+
+    # {
+    #   filter
+    # } = @state
+
+    {
+      c_Input
+    } = CFX
+
+    c_Input {}
+
+# mapStateToProps = (state) ->
+#   getState state.userApp.users
+
+# mapActionToProps =
+#   fetch: actions.visitorSave
+
+# export default connect(
+#   mapStateToProps
+#   mapActionToProps
+#   StoryTodos
+# )
+export default StoryTodos
+
+
+

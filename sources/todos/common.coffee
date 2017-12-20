@@ -1,30 +1,10 @@
-
-render = (
-  CFX
-  {
-    list
-    total
-    current
-  }
-) ->
-  { c_Users } = CFX
-  c_Users {
-    list
-    total
-    current
-  }
+render = ( CFX ) ->
+  { c_Input } = CFX
+  c_Input {}
 
 getState = (state) ->
-  {
-    list
-    total
-    page
-  } = state
-  {
-    list
-    total
-    page
-  }
+  { filter } = state
+  { filter }
 
 export {
   render

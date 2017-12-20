@@ -33,6 +33,7 @@
     "cfx.redux-saga": "^0.0.1",
     "cfx.redux-types": "^0.0.4",
     "cfx.react-redux": "^0.0.2",
+    "react-redux": "5.0.6",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
