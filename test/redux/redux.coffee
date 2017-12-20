@@ -1,6 +1,7 @@
 import dd from 'ddeyes'
 import 'shelljs/make'
 import { store }  from 'ReduxServ'
+
 {
   constants
   actions
@@ -33,13 +34,5 @@ target.reducers = ->
     filter: true
   
   myStore.onsubscribe()
-target.all = ->
-  dd store
-  # myStore = getStore {
-  #   appName: 'userApp'
-  #   reducers
-  #   subscriber:
-  #     sync: ->
-  #       dd myStore.getState()
-  # }
-  # dd myStore.getState()
+
+
