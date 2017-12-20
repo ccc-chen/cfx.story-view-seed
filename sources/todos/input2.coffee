@@ -2,11 +2,10 @@ import React, { Component } from 'react'
 import { Input } from 'cfx.todos'
 import { prefixDom } from 'cfx.dom'
 
-import { store } from 'ReduxServ'
+import { store } from '../ReduxServ/index'
 { actions } = store
 
 import { connect } from 'cfx.react-redux'
-# import { Provider } from 'react-redux'
 
 import {
   render
@@ -21,26 +20,29 @@ CFX = prefixDom {
 class StoryTodos extends Component
 
   constructor: (props) ->
-    console.log props
     super props
     @state = 
-      filter: false
+      filter: true
+    @
+
+  componentWillMount: ->
+    @props.actions.save()
     @
  
-  # componentWillReceiveProps: (nextProps) ->
-  #   {
-  #     filter
-  #   } = nextProps.state
-  #   @setState {
-  #     filter
-  #   }
-  #   @
+  componentWillReceiveProps: (nextProps) ->
+    {
+      filter
+    } = nextProps.state
+    @setState {
+      filter
+    }
+    @
 
   render: ->
 
-    # {
-    #   filter
-    # } = @state
+    {
+      filter
+    } = @state
 
     {
       c_Input
@@ -48,18 +50,18 @@ class StoryTodos extends Component
 
     c_Input {}
 
-# mapStateToProps = (state) ->
-#   getState state.userApp.users
+mapStateToProps = (state) ->
+  console.log getState state.userApp.users
 
-# mapActionToProps =
-#   fetch: actions.visitorSave
+mapActionToProps =
+  save: actions.visitorSave
+console.log actions
+export default connect(
+  mapStateToProps
+  mapActionToProps
+  StoryTodos
+)
 
-# export default connect(
-#   mapStateToProps
-#   mapActionToProps
-#   StoryTodos
-# )
-export default StoryTodos
 
 
 

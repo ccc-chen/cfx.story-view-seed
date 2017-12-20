@@ -3,7 +3,10 @@ render = ( CFX ) ->
   c_Input {}
 
 getState = (state) ->
-  { filter } = state
+  { 
+    filter
+  } = state
+  
   { filter }
 
 export {
